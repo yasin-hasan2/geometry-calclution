@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header class="max-w-7xl bg-cyan-300 mx-auto">
+        <div class="navbar bg-cyan-300">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Link</a></li>
+                    <li>
+                        <details>
+                            <summary>
+                                Parent
+                            </summary>
+                            <ul class="p-2 bg-red-100">
+                                <li><a>Link 1</a></li>
+                                <li><a>Link 2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+
+    <main class=" max-w-screen-xl mx-auto mt-10 lg:flex justify-around ">
+        <section class="lg:w-[70%]">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div class="card card-compact p-2  bg-[#FBBCED] shadow-xl">
+                    <figure><img class="mt-4" src="/images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title ">Triangle</h2>
+                        <p class="text-xl">Area (A) =0.5 X b X h</p>
+                        <div class="flex gap-3 justify-around">
+                            <input id="triangle-base" class="border w-20 " placeholder="b" type="text">
+                            <p>cm</p>
+                            <input id="triangle-hight" class="border w-20" placeholder="h" type="text">
+                            <p>cm</p>
+                        </div>
+                        <p class="text-lg font-bold">Area : <span id="triangle-area" class="text-white">0</span>
+                            cm <sub>2</sub> </p>
+                        <div class="card-actions">
+                            <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-compact p-2  bg-[#F87272] shadow-xl ">
+                    <figure><img class="mt-4" src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title ">Rectangle</h2>
+                        <p class="text-xl">Area (A) = w X I</p>
+                        <div class="flex gap-3 justify-around">
+                            <input id="rectangle-width" class="border w-20 " placeholder="w" type="text">
+                            <p>cm</p>
+                            <input id="rectangle-length" class="border w-20" placeholder="l" type="text">
+                            <p>cm</p>
+                        </div>
+                        <p class="text-lg font-bold">Area : <span id="rectangle-area" class="text-white">0</span>
+                            cm <sub>2</sub> </p>
+                        <div class="card-actions">
+                            <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-compact p-2  bg-[#FBBCED] shadow-xl">
+                    <figure><img class="mt-4" src="/images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title ">Parallelogram</h2>
+                        <p class="text-xl">Area (A) = b X h</p>
+                        <div class="flex gap-3 justify-around">
+                            <input id="parallelogram-base" class="border w-20 " placeholder="b" type="text">
+                            <p>cm</p>
+                            <input id="parallelogram-hight" class="border w-20" placeholder="h" type="text">
+                            <p>cm</p>
+                        </div>
+                        <p class="text-lg font-bold">Area : <span id="parallelogram-area" class="text-white">0</span>
+                            cm <sub>2</sub> </p>
+                        <div class="card-actions">
+                            <button onclick="calculateParallelogramArea()"
+                                class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-compact p-2  bg-[#979796] shadow-xl">
+                    <figure><img class="mt-4" src="/images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title ">Ellipse</h2>
+                        <p class="text-xl">Area (A) = &#960; X M.R X m.r</p>
+                        <div class="flex gap-3 justify-around">
+                            <input id="ellipse-base" class="border w-20 " placeholder="majorRedias" type="text">
+                            <p>cm</p>
+                            <input id="ellipse-hight" class="border w-20" placeholder="mainorRedias" type="text">
+                            <p>cm</p>
+                        </div>
+                        <p class="text-lg font-bold">Area : <span id="ellipse-area" class="text-white">0</span>
+                            cm <sub>2</sub> </p>
+                        <div class="card-actions">
+                            <button onclick="calculateellipseArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="mx-auto text-center">
+                <h3 class="text-4xl">Area Calculation</h3>
+                <div id="calculation-entry">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
